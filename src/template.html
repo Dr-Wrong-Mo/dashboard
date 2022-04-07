@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="shortcut icon" href="#">
+    <title><%= htmlWebpackPlugin.options.title %></title>
+  </head>
+  <body>
+    <div id="filter" class="filter"></div>
+    <div id="container" class="container">
+
+        <section class="stats">
+          <div id="today" class="date">
+            <div id="day" class="day"></div>
+            <div id="year" class="year"></div>
+          </div>
+          <div class="time">
+            <div class="hours"><span id="hours"></span>:<span id="minutes"></span></div>
+          </div>
+          <div class="weather">
+            <div id="weatherLoader" class="loader-37"></div>
+            <div id="temp"></div>
+            <div id="condition"></div>
+            <div id="city"></div>
+          </div>
+        </section>
+
+        <section class="planning">
+          <div id="calendar" class="calendar">
+
+            <div class="month">
+              <div id="goBack" class="changeMonth">&#60;</div>
+              <div id="calMonth"></div>
+              <div id="goForward" class="changeMonth">&#62;</div>
+            </div>
+
+            <div class="row days">
+              <div class="calCell">S</div>
+              <div class="calCell">M</div>
+              <div class="calCell">T</div>
+              <div class="calCell">W</div>
+              <div class="calCell">R</div>
+              <div class="calCell">F</div>
+              <div class="calCell">S</div>
+            </div>
+
+            <div class="row">
+              <div class="calDay calCell"></div>
+              <div class="calDay calCell"></div>
+              <div class="calDay calCell"></div>
+              <div class="calDay calCell"></div>
+              <div class="calDay calCell"></div>
+              <div class="calDay calCell"></div>
+              <div class="calDay calCell"></div>
+            </div>
+            <div class="row">
+              <div class="calDay calCell"></div>
+              <div class="calDay calCell"></div>
+              <div class="calDay calCell"></div>
+              <div class="calDay calCell"></div>
+              <div class="calDay calCell"></div>
+              <div class="calDay calCell"></div>
+              <div class="calDay calCell"></div>
+            </div>
+            <div class="row">
+              <div class="calDay calCell"></div>
+              <div class="calDay calCell"></div>
+              <div class="calDay calCell"></div>
+              <div class="calDay calCell"></div>
+              <div class="calDay calCell"></div>
+              <div class="calDay calCell"></div>
+              <div class="calDay calCell"></div>
+            </div>
+            <div class="row">
+              <div class="calDay calCell"></div>
+              <div class="calDay calCell"></div>
+              <div class="calDay calCell"></div>
+              <div class="calDay calCell"></div>
+              <div class="calDay calCell"></div>
+              <div class="calDay calCell"></div>
+              <div class="calDay calCell"></div>
+            </div>
+            <div class="row">
+              <div class="calDay calCell"></div>
+              <div class="calDay calCell"></div>
+              <div class="calDay calCell"></div>
+              <div class="calDay calCell"></div>
+              <div class="calDay calCell"></div>
+              <div class="calDay calCell"></div>
+              <div class="calDay calCell"></div>
+            </div>
+
+            <div class="row">
+              <div class="calDay calCell"></div>
+              <div class="calDay calCell"></div>
+              <div class="calDay calCell"></div>
+              <div class="calDay calCell"></div>
+              <div class="calDay calCell"></div>
+              <div class="calDay calCell"></div>
+              <div class="calDay calCell"></div>
+            </div>
+
+          </div>
+        </section>
+
+        <section class="bookmarks">
+          <ul id="bookmarks" class="bookmarks__list">
+            
+          </ul>
+        </section>
+
+    </div>
+  </body>
+</html>

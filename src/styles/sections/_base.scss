@@ -1,0 +1,73 @@
+@import url('https://fonts.googleapis.com/css2?family=BIZ+UDGothic&family=Montserrat:wght@100;200;400&family=Poiret+One&family=Rajdhani:wght@300;400;500;600;700&display=swap');
+
+:root {
+  font-size: 62.5%;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body,
+html {
+  overflow-y: hidden;
+}
+
+.container {
+  scroll-snap-type: x mandatory;
+  -webkit-overflow-scrolling: touch;
+  overflow-x: scroll;
+
+  display: flex;
+
+  font-family: 'Poiret One';
+  font-size: 62.5%;
+
+  @media (min-width: 53.125rem) {
+    justify-content: space-between;
+    scroll-snap-type: none;
+    overflow: hidden;
+  }
+}
+
+section {
+  padding: 3rem;
+  min-width: 100vw;
+  height: 100vh;
+
+  scroll-snap-align: start;
+  text-align: center;
+  position: relative;
+  overflow: hidden;
+
+  @media (min-width: 53.125rem) {
+    &:first-child,
+    &:last-child {
+      min-width: 30vw;
+    }
+
+    &:nth-child(2) {
+      min-width: 40vw;
+    }
+  }
+}
+
+.filter {
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 100vh;
+  width: 100%;
+  background-color: rgba(0, 0, 0, 0.2);
+  z-index: -1;
+  background-size: cover;
+  background-position: center;
+
+  user-select: none;
+  -moz-user-select: none;
+  -khtml-user-select: none;
+  -webkit-user-select: none;
+  -o-user-select: none;
+}
