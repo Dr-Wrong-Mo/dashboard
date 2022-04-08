@@ -10,7 +10,7 @@ import '../styles/main.scss'
 
 // IMPORT IMAGE FILES
 import rain from '../assets/rain.jpg'
-import snow from '../assets/snow.jpg'
+// import snow from '../assets/snow.jpg'
 
 // SOURCE MAP GENERATOR
 import { SourceMapGenerator } from 'source-map-js'
