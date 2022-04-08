@@ -13,7 +13,8 @@ module.exports = {
         clean: true,
         assetModuleFilename: './assets/[name][ext]',
     },
-    devtool: 'source-map',
+    // devtool: 'source-map',
+    devtool: false,
     devServer: {
         static: {
             directory: path.resolve(__dirname, 'dist')
