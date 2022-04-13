@@ -14,17 +14,17 @@ module.exports = {
         assetModuleFilename: './assets/[name][ext]',
     },
     // devtool: 'source-map',
-    devtool: false,
-    devServer: {
-        static: {
-            directory: path.resolve(__dirname, 'dist')
-        },
-        port: 3000,
-        open: true,
-        hot: true,
-        compress: true,
-        historyApiFallback: true,
-    },
+    // devtool: false,
+    // devServer: {
+    //     static: {
+    //         directory: path.resolve(__dirname, 'dist')
+    //     },
+    //     port: 3000,
+    //     open: true,
+    //     hot: true,
+    //     compress: true,
+    //     historyApiFallback: true,
+    // },
     performance: {
         hints: false,
         maxEntrypointSize: 512000,
