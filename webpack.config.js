@@ -1,6 +1,6 @@
 const path = require('path')
 const HTMLWebpackPlugin = require('html-webpack-plugin')
-const BundleAnalyzerPlugin = require('webpack-bundle-analyzer').BundleAnalyzerPlugin
+// const BundleAnalyzerPlugin = require('webpack-bundle-analyzer').BundleAnalyzerPlugin
 
 module.exports = {
     mode: 'production',
@@ -13,6 +13,7 @@ module.exports = {
         clean: true,
         assetModuleFilename: './assets/[name][ext]',
     },
+    // begin comment for Dev Tools Prior to Production Build
     // devtool: 'source-map',
     // devtool: false,
     // devServer: {
@@ -25,6 +26,7 @@ module.exports = {
     //     compress: true,
     //     historyApiFallback: true,
     // },
+    // end comment
     performance: {
         hints: false,
         maxEntrypointSize: 512000,
@@ -60,8 +62,8 @@ module.exports = {
         new HTMLWebpackPlugin ({
             title: "Jon's Dashboard",
             filename: 'index.html',
-            template: 'src/template.html',
+            template: 'template.html',
         }),
-        new BundleAnalyzerPlugin(),
+        // new BundleAnalyzerPlugin(),
     ]
 }
