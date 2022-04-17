@@ -14,18 +14,18 @@ module.exports = {
         assetModuleFilename: './assets/[name][ext]',
     },
     // begin comment for Dev Tools Prior to Production Build
-    // devtool: 'source-map',
-    // devtool: false,
-    // devServer: {
-    //     static: {
-    //         directory: path.resolve(__dirname, 'dist')
-    //     },
-    //     port: 3000,
-    //     open: true,
-    //     hot: true,
-    //     compress: true,
-    //     historyApiFallback: true,
-    // },
+    devtool: 'source-map',
+    devtool: false,
+    devServer: {
+        static: {
+            directory: path.resolve(__dirname, 'dist')
+        },
+        port: 3000,
+        open: true,
+        hot: true,
+        compress: true,
+        historyApiFallback: true,
+    },
     // end comment
     performance: {
         hints: false,
@@ -62,7 +62,7 @@ module.exports = {
         new HTMLWebpackPlugin ({
             title: "Jon's Dashboard",
             filename: 'index.html',
-            template: 'template.html',
+            template: 'src/template.html',
         }),
         // new BundleAnalyzerPlugin(),
     ]
