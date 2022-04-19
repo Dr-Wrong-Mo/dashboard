@@ -10,7 +10,7 @@ let monthVar = today.getMonth() + 1
 let monthVarLeadingZero = monthVar >= 10 ? '' : '0'
 let yearVar = today.getFullYear()
 
-function manageCalendar () {    
+function manageCalendar () {
   displayMonth()
   fillDays()
 }
@@ -22,7 +22,7 @@ function repaintCalendar () {
     day.innerHTML = ''
     day.classList.contains('today') ? day.classList.remove('today') : ''
   });
-  fillDays()  
+  fillDays()
 }
 
 goBack.addEventListener('click', () => {
@@ -54,10 +54,12 @@ function fillDays () {
         let leadingZero = 0
         leadingZero = i >= 10 ? '' : '0'
         let dayOfMonth = new Date(`${yearVar}-${monthVarLeadingZero}${monthVar}-${leadingZero}${i}T00:00:00`)
-        
+
         // Add the days date if the date matches the index
         if ( dayOfMonth.getDate() === NaN ) { return }
         if ( idx < dayOfMonth.getDay() ) { return }
+        if(idx - 7 > dayOfMonth.getDate()) {return}
+        if ( dayOfMonth.getDate() > 20 && idx - 7 > dayOfMonth.getDate() ) { return }
         if ( idx + 1 >= dayOfMonth.getDate() ) { el.innerHTML = dayOfMonth.getDate() }
         // Add class of today if day is today's date
         if(
@@ -72,9 +74,6 @@ function fillDays () {
     });
 
     rows.forEach((row, idx) => {
-        let hidden = false
-        let nodes = row.childNodes
-        
         let i = 0
         row.childNodes.forEach(element => {
           element.innerHTML === "" ? i++ : ""
