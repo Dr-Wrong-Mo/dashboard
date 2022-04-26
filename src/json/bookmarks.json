@@ -27,6 +27,10 @@
     {
       "name": "dev.to",
       "url": "https://dev.to/"
+    },
+    {
+      "name": "Slack",
+      "url": "web-dev-4.slack.com"
     }
   ]
 }
